@@ -1,1 +1,67 @@
+\subsection*{Example 3: Volume of the Upper Hemisphere}
 
+Find the volume of the upper hemisphere
+\[
+x^2 + y^2 + z^2 \leq 16, \quad z \geq 0.
+\]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{upper_hemisphere.png}
+    \caption{Upper hemisphere $x^2 + y^2 + z^2 \leq 16$, $z \geq 0$ with radius 4.}
+    \label{fig:upper_hemisphere}
+\end{figure}
+
+The equation $x^2 + y^2 + z^2 = 16$ represents a sphere of radius $4$. The condition $z \geq 0$ corresponds to the upper half of the sphere. In spherical coordinates,
+\[
+x = \rho \sin\phi \cos\theta, \quad y = \rho \sin\phi \sin\theta, \quad z = \rho \cos\phi,
+\]
+where $x^2 + y^2 + z^2 = \rho^2$.
+
+The bounds are:
+- $0 \leq \rho \leq 4$ (radius of the sphere),
+- $0 \leq \phi \leq \frac{\pi}{2}$ (upper hemisphere),
+- $0 \leq \theta \leq 2\pi$ (full rotation).
+
+The volume is
+\[
+V = \iiint_E 1 \, dV = \int_{0}^{2\pi} \int_{0}^{\pi/2} \int_{0}^{4} \rho^2 \sin\phi \, d\rho \, d\phi \, d\theta.
+\]
+
+\subsubsection*{Step 1: Integrate with respect to $\rho$}
+\[
+\int_{0}^{4} \rho^2 \sin\phi \, d\rho = \sin\phi \int_{0}^{4} \rho^2 \, d\rho = \sin\phi \left[ \frac{\rho^3}{3} \right]_{0}^{4} = \sin\phi \cdot \frac{64}{3}.
+\]
+
+The integral simplifies to
+\[
+V = \int_{0}^{2\pi} \int_{0}^{\pi/2} \frac{64}{3} \sin\phi \, d\phi \, d\theta.
+\]
+
+\subsubsection*{Step 2: Integrate with respect to $\phi$}
+\[
+\int_{0}^{\pi/2} \frac{64}{3} \sin\phi \, d\phi = \frac{64}{3} \left[ -\cos\phi \right]_{0}^{\pi/2} = \frac{64}{3} \left( -\cos\frac{\pi}{2} + \cos 0 \right) = \frac{64}{3} (0 + 1) = \frac{64}{3}.
+\]
+
+Thus,
+\[
+V = \int_{0}^{2\pi} \frac{64}{3} \, d\theta.
+\]
+
+\subsubsection*{Step 3: Integrate with respect to $\theta$}
+\[
+\int_{0}^{2\pi} \frac{64}{3} \, d\theta = \frac{64}{3} \left[ \theta \right]_{0}^{2\pi} = \frac{64}{3} \cdot 2\pi = \frac{128\pi}{3}.
+\]
+
+Therefore, the volume of the upper hemisphere is
+\[
+\boxed{\dfrac{128\pi}{3}}.
+\]
+
+This result matches the known formula for the volume of a hemisphere:
+\[
+V = \frac{1}{2} \cdot \frac{4}{3} \pi r^3 = \frac{2}{3} \pi (4)^3 = \frac{128\pi}{3}.
+\]
+
+
+\end{document}
