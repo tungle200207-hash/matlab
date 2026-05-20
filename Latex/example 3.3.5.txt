@@ -62,6 +62,17 @@ This result matches the known formula for the volume of a hemisphere:
 \[
 V = \frac{1}{2} \cdot \frac{4}{3} \pi r^3 = \frac{2}{3} \pi (4)^3 = \frac{128\pi}{3}.
 \]
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{example3.3.5.m.png}
+    \caption{Matlab code example 3.3.5}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{example3.3.5.png}
+    \caption{Result for example 3.3.5}
+    \label{fig:placeholder}
+\end{figure}
 
 
-\end{document}
