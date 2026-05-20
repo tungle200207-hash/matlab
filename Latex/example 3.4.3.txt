@@ -1,0 +1,64 @@
+\subsection*{Example 3.4.3: Linear Scaling Transformation}
+
+Evaluate
+\[
+\iiint_E 1 \, dV,
+\]
+where $E$ is the rectangular box defined by
+\[
+0 \leq x \leq 2, \quad 0 \leq y \leq 3, \quad 0 \leq z \leq 4.
+\]
+
+We use the linear transformation
+\[
+x = 2u, \quad y = 3v, \quad z = 4w.
+\]
+
+Under this transformation, the region $E$ in $xyz$-space is mapped from the unit cube $G$ in $uvw$-space:
+\[
+0 \leq u \leq 1, \quad 0 \leq v \leq 1, \quad 0 \leq w \leq 1.
+\]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{linear_transformation.png}
+    \caption{Linear scaling transformation from the unit cube $G$ to the rectangular box $E$.}
+    \label{fig:linear_scaling}
+\end{figure}
+
+\subsubsection*{Step 1: Compute the Jacobian Determinant}
+
+The Jacobian matrix is
+\[
+J = \frac{\partial(x,y,z)}{\partial(u,v,w)} = 
+\begin{vmatrix}
+2 & 0 & 0 \\
+0 & 3 & 0 \\
+0 & 0 & 4
+\end{vmatrix} = 2 \cdot 3 \cdot 4 = 24.
+\]
+
+Thus, $\left| J \right| = 24$.
+
+\subsubsection*{Step 2: Apply the Change of Variables}
+
+The triple integral becomes
+\[
+\iiint_E 1 \, dV = \iiint_G \left| J \right| \, du\, dv\, dw = \int_{0}^{1} \int_{0}^{1} \int_{0}^{1} 24 \, du\, dv\, dw.
+\]
+
+\subsubsection*{Step 3: Evaluate the Integral}
+
+\[
+\int_{0}^{1} \int_{0}^{1} \int_{0}^{1} 24 \, du\, dv\, dw = 24 \int_{0}^{1} \int_{0}^{1} \int_{0}^{1} 1 \, du\, dv\, dw = 24 \times 1 = 24.
+\]
+
+Therefore, the volume of the rectangular box is
+\[
+\boxed{24}.
+\]
+
+This result agrees with the direct geometric calculation:
+\[
+V = \text{length} \times \text{width} \times \text{height} = 2 \times 3 \times 4 = 24.
+\]
