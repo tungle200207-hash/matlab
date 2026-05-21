@@ -1,0 +1,74 @@
+\subsection*{Example 3.5.3: Volume of a Solid Under a Plane}
+
+Find the volume of the solid bounded by the planes 
+\[
+z = 0, \quad z = 4 - x - y,
+\]
+over the triangular region in the $xy$-plane defined by
+\[
+x \geq 0, \quad y \geq 0, \quad x + y \leq 4.
+\]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{solid_under_plane.png}
+    \caption{Solid region bounded above by the plane $z=4-x-y$ and below by the $xy$-plane over the triangle $x+y\leq 4$.}
+    \label{fig:solid_under_plane}
+\end{figure}
+
+The volume can be expressed as the triple integral
+\[
+V = \iiint_E 1 \, dV = \int_{0}^{4} \int_{0}^{4-x} \int_{0}^{4-x-y} \, dz \, dy \, dx.
+\]
+
+\subsubsection*{Step 1: Integrate with respect to $z$}
+
+\[
+\int_{0}^{4-x-y} 1 \, dz = \left[ z \right]_{0}^{4-x-y} = 4 - x - y.
+\]
+
+The integral simplifies to
+\[
+V = \int_{0}^{4} \int_{0}^{4-x} (4 - x - y) \, dy \, dx.
+\]
+
+\subsubsection*{Step 2: Integrate with respect to $y$}
+
+\[
+\int_{0}^{4-x} (4 - x - y) \, dy = \left[ (4 - x)y - \frac{y^2}{2} \right]_{0}^{4-x} 
+= (4 - x)(4 - x) - \frac{(4 - x)^2}{2} 
+= (4 - x)^2 - \frac{(4 - x)^2}{2} = \frac{(4 - x)^2}{2}.
+\]
+
+The integral now becomes
+\[
+V = \int_{0}^{4} \frac{(4 - x)^2}{2} \, dx.
+\]
+
+\subsubsection*{Step 3: Integrate with respect to $x$}
+
+\[
+V = \frac{1}{2} \int_{0}^{4} (4 - x)^2 \, dx.
+\]
+
+Substitute $u = 4 - x$, so $du = -dx$. When $x=0$, $u=4$; when $x=4$, $u=0$:
+\[
+V = \frac{1}{2} \int_{4}^{0} u^2 (-du) = \frac{1}{2} \int_{0}^{4} u^2 \, du = \frac{1}{2} \left[ \frac{u^3}{3} \right]_{0}^{4} = \frac{1}{2} \cdot \frac{64}{3} = \frac{32}{3}.
+\]
+
+Therefore, the volume of the solid is
+\[
+\boxed{\dfrac{32}{3}}.
+\]
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{example3.5.3.m.png}
+    \caption{Matlab code example 3.5.3}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{example3_5_3.png}
+    \caption{Result for example 3.5.3}
+    \label{fig:placeholder}
+\end{figure}
