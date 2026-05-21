@@ -19,12 +19,6 @@ Under this transformation, the region $E$ in $xyz$-space is mapped from the unit
 0 \leq u \leq 1, \quad 0 \leq v \leq 1, \quad 0 \leq w \leq 1.
 \]
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{linear_transformation.png}
-    \caption{Linear scaling transformation from the unit cube $G$ to the rectangular box $E$.}
-    \label{fig:linear_scaling}
-\end{figure}
 
 \subsubsection*{Step 1: Compute the Jacobian Determinant}
 
