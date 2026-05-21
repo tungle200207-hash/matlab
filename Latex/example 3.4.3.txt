@@ -62,3 +62,15 @@ This result agrees with the direct geometric calculation:
 \[
 V = \text{length} \times \text{width} \times \text{height} = 2 \times 3 \times 4 = 24.
 \]
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{example3.4.3.m.png}
+    \caption{Matlab code example 3.4.3}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{example3.4.3.png}
+    \caption{Result for example 3.4.3}
+    \label{fig:placeholder}
+\end{figure}
