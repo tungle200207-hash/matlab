@@ -70,7 +70,7 @@ V = \text{length} \times \text{width} \times \text{height} = 2 \times 3 \times 4
 \end{figure}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{example3.4.3.png}
+    \includegraphics[width=0.8\textwidth]{example3_4_3.png}
     \caption{Result for example 3.4.3}
     \label{fig:placeholder}
 \end{figure}
